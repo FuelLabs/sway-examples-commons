@@ -1,11 +1,13 @@
 {
   "name": "sway-example-commons",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "description": "Common components for sway example apps",
   "main": "./dist/index.js",
   "type": "module",
   "files": [
-    "dist/"
+    "dist/",
+    "scripts/build-website/index.mjs",
+    "scripts/build-website/utils.mjs"
   ],
   "exports": {
     ".": "./dist/index.js"
