@@ -3,7 +3,7 @@ import { execa } from "execa";
 import fs from "node:fs";
 import { join } from "path";
 
-const ROOT_PATH = process.cwd();
+const ROOT_PATH = process.cwd() + "/../sway-examples/";
 const DIST_FOLDER = join(ROOT_PATH, "./dist");
 const NFT_APP_PATH = "/nft/";
 const COUNTER_APP_PATH = "/counter/";
@@ -40,7 +40,7 @@ export async function runPnpmCommand(commands) {
 
 export async function buildWebsite() {
     fs.rmSync(DIST_FOLDER, { recursive: true, force: true });
-    await runPnpmCommand(["build:all", "--force", "--no-cache"]);
-    //fs.cpSync(join(ROOT_PATH, "index.html"), join(DIST_FOLDER, "index.html"));
+    process.chdir(ROOT_PATH);
+    await runPnpmCommand(["build:all"]);
     fs.cpSync(join(ROOT_PATH, "public/"), join(DIST_FOLDER, "public/"), { recursive: true });
 }

@@ -20,7 +20,8 @@
     "build:all": "pnpm run ts:check && pnpm run build:lib",
     "build:lib": "tsup",
     "build:watch": "tsup --watch",
-    "ts:check": "tsc --noEmit"
+    "ts:check": "tsc --noEmit",
+    "build:preview": "node ./scripts/build-website/index.mjs"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +32,7 @@
     "@fuels/connectors": "0.27.1",
     "@fuels/react": "^0.25.0",
     "@mui/material": "^5.15.12",
+    "execa": "^9.4.0",
     "fuels": "0.94.5",
     "react": "^18.2",
     "react-dom": "^18.2",
