@@ -34,8 +34,9 @@ export function setEnv() {
     // Log env vars
     console.log("Output urls:");
     console.log("VITE_BASE_URL", process.env.VITE_BASE_URL);
-    console.log("AIRDROP_BASE_URL", process.env.AIRDROP_BASE_URL);
+    console.log("NFT_BASE_URL", process.env.NFT_BASE_URL);
     console.log("COUNTER_BASE_URL", process.env.COUNTER_BASE_URL);
+    console.log("AIRDROP_BASE_URL", process.env.AIRDROP_BASE_URL);
 }
 
 export async function runPnpmCommand(commands) {
